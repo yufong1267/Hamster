@@ -1,0 +1,9 @@
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\bin\Debug\HitRatGameplay.exe.config
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\bin\Debug\HitRatGameplay.exe
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\bin\Debug\HitRatGameplay.pdb
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.Form1.resources
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.Properties.Resources.resources
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.csproj.GenerateResource.Cache
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.exe
+c:\users\user\documents\visual studio 2015\Projects\HitRatGameplay\HitRatGameplay\obj\Debug\HitRatGameplay.pdb
