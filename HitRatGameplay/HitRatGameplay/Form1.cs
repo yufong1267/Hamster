@@ -87,16 +87,19 @@ namespace HitRatGameplay
         {
             if (e.KeyCode == Keys.A && !pressed)
             {
+                malletA.Image = new Bitmap(Properties.Resources.iron);
                 btn_Click(null, null);
                 pressed = true;
             }
             if (e.KeyCode == Keys.S && !pressed)
             {
+                malletS.Image = new Bitmap(Properties.Resources.iron);
                 button2_Click(null, null);
                 pressed = true;
             }
             if (e.KeyCode == Keys.D && !pressed)
             {
+                malletD.Image = new Bitmap(Properties.Resources.iron);
                 Dpress_Click(null, null);
                 pressed = true;
             }
@@ -132,6 +135,9 @@ namespace HitRatGameplay
         {
             //這邊解除已經按下
             pressed = false;
+            malletA.Image = new Bitmap(Properties.Resources.iron2);
+            malletS.Image = new Bitmap(Properties.Resources.iron2);
+            malletD.Image = new Bitmap(Properties.Resources.iron2);
         }
 
         private void Dpress_Click(object sender, EventArgs e)
@@ -177,19 +183,20 @@ namespace HitRatGameplay
                 ran_rat = sign[rnd.Next(0,3)];
                 //這邊生成1隻地鼠
                 Button reg_btn = new Button();
-                reg_btn.Size = new Size(75, 23);
-                reg_btn.Text = "我是地鼠";
+                reg_btn.Size = new Size(100, 100);
+                // reg_btn.Text = "我是地鼠";
+                reg_btn.Image = new Bitmap(Properties.Resources.rat2);
                     
                 switch(ran_rat)
                 {
                     case 'A':
-                        reg_btn.Location = new Point(Apress.Location.X, Apress.Location.Y - 23);
+                        reg_btn.Location = new Point(Apress.Location.X, Apress.Location.Y - 52);
                         break;
                     case 'S':
-                        reg_btn.Location = new Point(Spress.Location.X, Spress.Location.Y - 23);
+                        reg_btn.Location = new Point(Spress.Location.X, Spress.Location.Y - 52);
                         break;
                     case 'D':
-                        reg_btn.Location = new Point(Dpress.Location.X, Dpress.Location.Y - 23);
+                        reg_btn.Location = new Point(Dpress.Location.X, Dpress.Location.Y - 52);
                         break;
                 }
                 rat = reg_btn;
@@ -207,10 +214,10 @@ namespace HitRatGameplay
         private void animation_timer_Tick(object sender, EventArgs e)
         {
             //do nothing just for delay
-            delay_time--; 
+            delay_time-=5; 
               
             rat.Top--;
-            if(rat.Top <= 316)
+            if(rat.Top <= 200)
             {
                 animation_timer.Enabled = false;
                 rat_to_bottom = false;
@@ -230,8 +237,8 @@ namespace HitRatGameplay
         private void killrat_timer_Tick(object sender, EventArgs e)
         {
             delay_time++;
-            rat.Top++;
-            if (rat.Top >= 350)
+            rat.Top+=3;
+            if (rat.Top >= 400)
             {
                 animation_timer.Enabled = false;
                 rat_to_bottom = true;
