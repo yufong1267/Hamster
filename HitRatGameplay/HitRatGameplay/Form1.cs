@@ -57,6 +57,7 @@ namespace HitRatGameplay
         }
 
         private bool rat_to_bottom = false;
+        private bool point_added = false;
         private void btn_Click(object sender, EventArgs e)
         {
             //確認按下A 這邊做 確認random = 1 確認後random要做更換圖片(往下移/往上移)
@@ -70,7 +71,11 @@ namespace HitRatGameplay
                     rat.Dispose();
                     this.Controls.Remove(rat);
                     rat_alive = false;
-                    Final_Point++;
+                    if (!point_added)
+                    {//檢查分數加過沒
+                        Final_Point++;
+                        point_added = true;
+                    }
                     rat_to_bottom = false;
                     killrat_timer.Enabled = false;
                 }
@@ -112,7 +117,11 @@ namespace HitRatGameplay
                     rat.Dispose();
                     this.Controls.Remove(rat);
                     rat_alive = false;
-                    Final_Point++;
+                    if (!point_added)
+                    {//檢查分數加過沒
+                        Final_Point++;
+                        point_added = true;
+                    }
                     rat_to_bottom = false;
                     killrat_timer.Enabled = false;
                 }
@@ -138,7 +147,12 @@ namespace HitRatGameplay
                     rat.Dispose();
                     this.Controls.Remove(rat);
                     rat_alive = false;
-                    Final_Point++;
+                    if (!point_added)
+                    {
+                        //檢查分數加過沒
+                        Final_Point++;
+                        point_added = true;
+                    }
                     rat_to_bottom = false;
                     killrat_timer.Enabled = false;
                 }  
@@ -180,6 +194,8 @@ namespace HitRatGameplay
                 }
                 rat = reg_btn;
                 this.Controls.Add(rat);
+                //新物件分數重算
+                point_added = false;
                 killrat_timer.Enabled = false;
                 animation_timer.Enabled = true;
                 delay_time = 46;
